@@ -5,7 +5,7 @@ const runner = require('./google-spreadsheet-control-runner');
 
 const zuoraBaseUrl = ''
 const zuoraUsername = '';
-const zuoraPassword = ''; // To obscure on screen only --> .split('').map((c) => String.fromCharCode(c.charCodeAt(0) - 13)).join('');
+const zuoraPassword = ''; 
 
 const zuoraAuthHeaders = {
     apiAccessKeyId: zuoraUsername,
@@ -50,11 +50,10 @@ function processSubscription(spreadsheetRow) {
    	  	} else {
      		console.log(`for account ${spreadsheetRow.accountid} response: ${JSON.stringify(res)}.`)
      		setRowProgress(spreadsheetRow, 'DONE');
-
      	}
+ 	step();
    	 }
      updateAccount(spreadsheetRow.accountid, spreadsheetRow.crmid)(handleResponse)
-   	 step();
    }
 }
 
