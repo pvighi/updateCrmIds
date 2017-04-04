@@ -1,0 +1,10 @@
+{
+  "name": "zuora-fix-agents",
+  "version": "1.0.0",
+  "dependencies": {
+    "async": "2.3.0",
+    "google-spreadsheet":"2.0.3",
+    "moment": "2.18.0",
+    "request": "2.81.0"
+  }
+}
